@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eu te amo bel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fff0f6;
+      --card:#ffffff;
+      --pink:#ff6fae;
+      --pink-dark:#ff4d94;
+    }
+
+    *{ box-sizing:border-box }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      background:linear-gradient(135deg,#ffd6e8,#fff);
+      font-family:'Nunito',system-ui;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+    }
+
+    .book{
+      width:min(680px,100%);
+      background:var(--card);
+      border-radius:22px;
+      box-shadow:0 24px 50px rgba(0,0,0,.18);
+      overflow:hidden;
+    }
+
+    header{
+      padding:18px;
+      background:var(--bg);
+      text-align:center;
+    }
+
+    header h1{
+      margin:0;
+      font-family:'Pacifico',cursive;
+      color:var(--pink-dark);
+      font-size:34px;
+    }
+
+    .page{
+      display:none;
+      padding:28px;
+      animation:fade .35s ease;
+    }
+
+    .page.active{ display:block }
+
+    @keyframes fade{
+      from{ opacity:0; transform:translateY(6px) }
+      to{ opacity:1; transform:none }
+    }
+
+    .controls{
+      display:flex;
+      gap:10px;
+      justify-content:space-between;
+      padding:16px;
+      background:#fafafa;
+    }
+
+    button{
+      border:none;
+      border-radius:999px;
+      padding:14px 22px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:16px;
+    }
+
+    .next{ background:var(--pink); color:#fff }
+    .prev{ background:#eaeaea }
+
+    .card{
+      border:2px dashed #ffd0e3;
+      border-radius:14px;
+      padding:14px;
+      margin:10px 0;
+    }
+
+    .photos{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .photo-slot{
+      border:2px dashed #ffc1da;
+      border-radius:16px;
+      height:180px;
+      background:#fff7fb;
+      overflow:hidden;
+    }
+
+    .photo-slot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .center{ text-align:center }
+
+    .big{
+      font-family:'Pacifico',cursive;
+      color:var(--pink-dark);
+      font-size:32px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:16px;
+      justify-content:center;
+      margin-top:20px;
+    }
+
+    .yes{ background:#4cd964; color:#fff }
+    .no{ background:#ff7676; color:#fff }
+
+    .timer{
+      font-size:22px;
+      margin-top:16px;
+    }
+
+    footer{
+      padding:10px;
+      text-align:center;
+      color:#888;
+      font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="book">
+
+    <header>
+      <h1>pra voce 💕</h1>
+    </header>
+
+    <div class="pages">
+
+      <!-- Página 1 -->
+      <section class="page active">
+        <p class="center big">oiee meu amor 💗</p>
+        <div class="card">
+          <p>esse livrinho é só nosso, fiz com muito amor e carinho quero demonstrar tudo oque sinto por você nele, por mais que você ja saiba que eu te amo muito fica so entre nois é nosso segredo to brincando tá eu ia botar entre aspas mas da erro no codigo dai DAKSDKWAKSD</p>
+        </div>
+      </section>
+
+      <!-- Página 2 -->
+      <section class="page">
+        <p class="big">o que eu sinto por ti</p>
+        <div class="card">
+          <p>
+            é dificil eu expressar oque eu sinto por alguem porque eu sempre fui muito fechado na minha mas com você eu quero ser totalmente diferente e mesmo a gente se conhecendo a muito tempo foi rapido nossa decisão e eu tenho certeza dela, e eu quero que você saiba que eu te amo muito e sempre vou cuidar de você e dar meu maximo por nos dois eu te amo minha garota. 💫
+          </p>
+        </div>
+      </section>
+
+      <!-- Página 3 -->
+      <section class="page">
+        <p class="big">Minha princesa linda babei 📸</p>
+        <div class="card">
+          <div class="photos">
+
+            <div class="photo-slot">
+              <img src="https://i.imgur.com/JAD1SJv.jpeg">
+            </div>
+
+            <div class="photo-slot">
+              <img src="https://i.imgur.com/f05yln4.jpeg">
+            </div>
+
+            <div class="photo-slot">
+              <img src="https://i.imgur.com/C0D70KR.jpeg">
+            </div>
+
+            <div class="photo-slot">
+              <img src="https://i.imgur.com/pqVk4UE.jpeg">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Página 4 -->
+      <section class="page">
+        <p class="big">você e uma garota especial 💖</p>
+        <div class="card">
+          <p>por mais que eu não demonstre voce e uma garota muito especial pra mim por isso eu to aqui querendo levar nos dois pra frente você consegue tirar um sorriso do meu rosto só conversando cmg chega ser engraçado, eu amo muito vc minha bebe minha nenem meu amorzinho eu te amo🌈</p>
+        </div>
+      </section>
+
+      <!-- Página final -->
+      <section class="page">
+        <p class="center big">Quer namorar comigo? 💘</p>
+
+        <div class="buttons">
+          <button class="yes" id="yesBtn">Sim 💖</button>
+          <button class="no" id="noBtn">Não 🙈</button>
+        </div>
+
+        <div class="center">
+          <div class="timer" id="timer"></div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="controls">
+      <button class="prev" id="prev">◀ Voltar</button>
+      <button class="next" id="next">Próxima ▶</button>
+    </div>
+
+    <footer>feito com muito carinho pelo samz 💗</footer>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    let index = 0;
+
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    function show(i){
+      pages.forEach(p=>p.classList.remove('active'));
+      pages[i].classList.add('active');
+      prev.disabled = i===0;
+      next.disabled = i===pages.length-1;
+    }
+
+    prev.onclick = ()=>{ if(index>0){ index--; show(index);} };
+    next.onclick = ()=>{ if(index<pages.length-1){ index++; show(index);} };
+
+    // Botão NÃO foge
+    const noBtn = document.getElementById('noBtn');
+    noBtn.addEventListener('mouseover',()=>{
+      const x = Math.random()*240 - 120;
+      const y = Math.random()*160 - 80;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // Botão SIM
+    const yesBtn = document.getElementById('yesBtn');
+    const timerEl = document.getElementById('timer');
+    let startTime = null;
+    let interval = null;
+
+    yesBtn.onclick = ()=>{
+      if(interval) return;
+      startTime = new Date();
+      interval = setInterval(()=>{
+        const diff = new Date() - startTime;
+        const s = Math.floor(diff/1000)%60;
+        const m = Math.floor(diff/60000)%60;
+        const h = Math.floor(diff/3600000);
+        timerEl.textContent = `Estamos namorando há ${h}h ${m}m ${s}s 💕`;
+      },1000);
+    };
+
+    show(index);
+  </script>
+</body>
+</html>
